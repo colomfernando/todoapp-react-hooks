@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GlobalStyles from 'GlobalStyles';
+
 class App extends Component {
   render() {
     return (
