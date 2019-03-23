@@ -24,6 +24,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-plugin-macros": "^2.5.0"
+    "babel-plugin-macros": "^2.5.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
   }
 }
