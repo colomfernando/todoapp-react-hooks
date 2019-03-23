@@ -1,10 +1,9 @@
 import styled from 'styled-components/macro';
 
 export default {
-  Container: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-  `,
+	Container: styled.div`
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	`
 };

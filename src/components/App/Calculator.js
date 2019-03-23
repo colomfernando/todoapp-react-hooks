@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GlobalStyles from 'GlobalStyles';
 import Styled from './styles';
 
-class App extends Component {
+class Calculator extends Component {
   render() {
     return (
       <React.Fragment>
@@ -13,4 +13,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Calculator;

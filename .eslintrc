@@ -1,10 +1,14 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended", "airbnb"],
-  "plugins": ["prettier"],
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended",
+    "prettier-react",
+    "airbnb"
+  ],
+  "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "indent": ["error", 2]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "settings": {
     "import/resolver": {
