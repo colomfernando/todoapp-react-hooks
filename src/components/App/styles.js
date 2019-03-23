@@ -2,6 +2,9 @@ import styled from 'styled-components/macro';
 
 export default {
   Container: styled.div`
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
   `,
 };

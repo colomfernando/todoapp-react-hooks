@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import GlobalStyles from 'GlobalStyles';
+import Styled from './styles';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <GlobalStyles />
-        <div className="App" />
+        <Styled.Container />
       </React.Fragment>
     );
   }
