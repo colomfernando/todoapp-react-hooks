@@ -5,6 +5,7 @@ import { create } from 'jss';
 import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 import Styled from './styles';
 import Form from 'components/Form';
+import Task from 'components/Task';
 
 const styleNode = document.createComment('insertion-point-jss');
 document.head.insertBefore(styleNode, document.head.firstChild);
@@ -19,7 +20,14 @@ class App extends Component {
 				<React.Fragment>
 					<GlobalStyles />
 					<Styled.Container>
-						<Form />
+						<Styled.WrapperForm>
+							<Form />
+						</Styled.WrapperForm>
+						<Styled.WrapperTask>
+							<Task />
+							<Task />
+							<Task />
+						</Styled.WrapperTask>
 					</Styled.Container>
 				</React.Fragment>
 			</JssProvider>

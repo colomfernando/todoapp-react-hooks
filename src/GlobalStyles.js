@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components/macro';
 
 const GlobalStyles = createGlobalStyle`
-html {
+html,
+* {
   line-height: 1;
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
