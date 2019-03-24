@@ -11,6 +11,12 @@ body {
   margin: 0;
 }
 
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 main {
   display: block;
 }
