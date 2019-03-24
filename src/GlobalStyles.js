@@ -8,7 +8,9 @@ html {
 }
 
 body {
-  margin: 0;
+	margin: 0;
+	background-color: #f5f5f5;
+	font-family: 'Roboto', sans-serif;
 }
 
 #root {

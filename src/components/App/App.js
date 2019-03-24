@@ -4,6 +4,7 @@ import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
 import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 import Styled from './styles';
+import Input from 'components/Input';
 
 const styleNode = document.createComment('insertion-point-jss');
 document.head.insertBefore(styleNode, document.head.firstChild);
@@ -17,7 +18,9 @@ class App extends Component {
 			<JssProvider jss={jss} generateClassName={generateClassName}>
 				<React.Fragment>
 					<GlobalStyles />
-					<Styled.Container />
+					<Styled.Container>
+						<Input />
+					</Styled.Container>
 				</React.Fragment>
 			</JssProvider>
 		);
