@@ -1,1 +1,1 @@
-export { default } from './Calculator';
+export { default } from './App';

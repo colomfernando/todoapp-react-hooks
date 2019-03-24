@@ -5,5 +5,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		max-width: 500px;
+		height: auto;
 	`
 };
