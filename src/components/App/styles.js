@@ -8,7 +8,7 @@ export default {
 		align-items: center;
 		flex-flow: column nowrap;
 		margin-top: 30px;
-		padding: 15px 20px;
+		padding: 10px 20px;
 		max-width: 500px;
 		width: 100%;
 		height: auto;
