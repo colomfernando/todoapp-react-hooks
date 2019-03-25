@@ -15,6 +15,10 @@ const reducer = (state = initialState, action) => {
 					return Object.assign({}, item, { done: !item.done });
 				})
 			});
+		case 'delete':
+			return Object.assign({}, state, {
+				items: state.items.filter(item => item.id !== action.payload)
+			});
 		default:
 			return state;
 	}

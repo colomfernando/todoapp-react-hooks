@@ -25,5 +25,8 @@ export default {
 		display: flex;
 		background-color: #7b7c7c;
 		height: 1px;
+	`,
+	Text: styled.p`
+		color: ${({ done }) => (done ? '#7b7c7c' : 'initial')};
 	`
 };

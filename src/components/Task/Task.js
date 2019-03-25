@@ -14,9 +14,9 @@ const Task = ({ text, dispatch, id, done }) => {
 				<Transition items={done} from={{ x: 0 }} enter={{ x: 100 }} leave={{ x: 0 }}>
 					{done => done && (props => <Styled.Line style={{ width: `${props.x}%` }} />)}
 				</Transition>
-				<p>{text}</p>
+				<Styled.Text done={done}>{text}</Styled.Text>
 			</Styled.WrapperText>
-			<Styled.IconButton>
+			<Styled.IconButton onClick={() => dispatch({ type: 'delete', payload: id })}>
 				<DeleteIcon fontSize="small" />
 			</Styled.IconButton>
 		</Styled.Container>
