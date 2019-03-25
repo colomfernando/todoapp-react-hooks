@@ -16,15 +16,13 @@ const jss = create({ ...jssPreset(), insertionPoint: 'insertion-point-jss' });
 
 const App = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
-	console.log(state);
-
 	return (
 		<JssProvider jss={jss} generateClassName={generateClassName}>
 			<React.Fragment>
 				<GlobalStyles />
 				<Styled.Container>
 					<Form dispatch={dispatch} items={state.items} />
-					{state.items && state.items.length ? <GroupTasks items={state.items} /> : null}
+					{!!state.items.length && <GroupTasks dispatch={dispatch} items={state.items} />}
 				</Styled.Container>
 			</React.Fragment>
 		</JssProvider>

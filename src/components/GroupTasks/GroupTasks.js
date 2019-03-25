@@ -3,7 +3,7 @@ import Styled from './styles';
 import { Transition, animated, config } from 'react-spring/renderprops';
 import Task from 'components/Task';
 
-const GroupTasks = ({ items }) => {
+const GroupTasks = ({ items, dispatch }) => {
 	return (
 		<Styled.Container>
 			<Transition
@@ -16,7 +16,7 @@ const GroupTasks = ({ items }) => {
 			>
 				{item => props => (
 					<animated.div style={props}>
-						<Task text={item.value} />
+						<Task id={item.id} done={item.done} dispatch={dispatch} text={item.value} />
 					</animated.div>
 				)}
 			</Transition>
