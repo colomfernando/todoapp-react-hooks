@@ -2,7 +2,7 @@ import React from 'react';
 import Styled from './styles';
 import DoneIcon from '@material-ui/icons/Done';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Transition, config } from 'react-spring/renderprops';
+import { Transition } from 'react-spring/renderprops';
 
 const Task = ({ text, dispatch, id, done }) => {
 	return (
