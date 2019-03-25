@@ -13,6 +13,7 @@ export default {
 		border-top: 1px solid #9e9e9e;
 		display: flex;
 		align-items: center;
+		width: 100%;
 	`,
 	BasicChip: styled(BaseChip)`
 		border-color: #f24848;
