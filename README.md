@@ -1,6 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Todo App
+
+Example of Todo App using React, React hooks and React-spring for animation.
+
+## Instalation
+
+```
+git clone https://github.com/colomfernando/todoapp-react-hooks.git
+npm i
+npm start // for develop mode
+```
+
 ## Available Scripts
+
+---
 
 In the project directory, you can run:
 
