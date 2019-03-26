@@ -1,15 +1,38 @@
 import { createGlobalStyle } from 'styled-components/macro';
 
 const GlobalStyles = createGlobalStyle`
-html,
-* {
+html {
   line-height: 1;
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-	margin: 0;
 	background-color: #f5f5f5;
 	font-family: 'Roboto', sans-serif;
 }
@@ -24,13 +47,13 @@ main {
   display: block;
 }
 
-p {
-	margin: 0;
-}
-
 a {
 	background-color: transparent;
 	text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 abbr[title] {
@@ -59,14 +82,23 @@ textarea {
   margin: 0; 
 }
 
-button,
-input {
-  overflow: visible;
+input,
+textarea,
+select,
+button {
+  color: inherit; 
+  font: inherit; 
+	letter-spacing: inherit; 
+	overflow: visible;
 }
 
 button,
 select {
   text-transform: none;
+}
+
+button * {
+  pointer-events: none;
 }
 
 button,
@@ -117,6 +149,12 @@ textarea {
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 `;
 
