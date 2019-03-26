@@ -1,8 +1,9 @@
 import React from 'react';
-import Styled from './styles';
+import { string, func, oneOfType, number, bool } from 'prop-types';
 import DoneIcon from '@material-ui/icons/Done';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { Transition } from 'react-spring/renderprops';
+import Styled from './styles';
 
 const Task = ({ text, dispatch, id, done }) => {
 	return (
@@ -12,7 +13,7 @@ const Task = ({ text, dispatch, id, done }) => {
 			</Styled.IconButton>
 			<Styled.WrapperText>
 				<Transition items={done} from={{ x: 0 }} enter={{ x: 100 }} leave={{ x: 0 }}>
-					{done => done && (props => <Styled.Line style={{ width: `${props.x}%` }} />)}
+					{show => show && (props => <Styled.Line style={{ width: `${props.x}%` }} />)}
 				</Transition>
 				<Styled.Text done={done}>{text}</Styled.Text>
 			</Styled.WrapperText>
@@ -21,6 +22,20 @@ const Task = ({ text, dispatch, id, done }) => {
 			</Styled.IconButton>
 		</Styled.Container>
 	);
+};
+
+Task.propTypes = {
+	text: string,
+	dispatch: func,
+	id: oneOfType([string, number]),
+	done: bool
+};
+
+Task.defaultProps = {
+	text: '',
+	dispatch: () => {},
+	id: '',
+	done: false
 };
 
 export default Task;

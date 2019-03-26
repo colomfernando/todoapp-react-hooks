@@ -1,7 +1,8 @@
 import React from 'react';
-import Styled from './styles';
+import { func, arrayOf, any } from 'prop-types';
 import { Transition, animated, config } from 'react-spring/renderprops';
 import Task from 'components/Task';
+import Styled from './styles';
 
 const GroupTasks = ({ items, dispatch }) => {
 	return (
@@ -22,6 +23,16 @@ const GroupTasks = ({ items, dispatch }) => {
 			</Transition>
 		</Styled.Container>
 	);
+};
+
+GroupTasks.propTypes = {
+	dispatch: func,
+	items: arrayOf(any)
+};
+
+GroupTasks.defaultProps = {
+	dispatch: () => {},
+	items: []
 };
 
 export default GroupTasks;

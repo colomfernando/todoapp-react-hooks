@@ -1,4 +1,5 @@
 import React from 'react';
+import { oneOfType, number, string } from 'prop-types';
 import { Spring } from 'react-spring/renderprops';
 import Styled from './styles';
 
@@ -14,6 +15,18 @@ const Stats = ({ total, active, done }) => {
 			)}
 		</Spring>
 	);
+};
+
+Stats.propTypes = {
+	total: oneOfType([number, string]),
+	active: oneOfType([number, string]),
+	done: oneOfType([number, string])
+};
+
+Stats.defaultProps = {
+	total: '',
+	active: '',
+	done: ''
 };
 
 export default Stats;

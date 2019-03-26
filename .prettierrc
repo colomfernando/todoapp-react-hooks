@@ -3,5 +3,6 @@
   "printWidth": 100,
   "semi": true,
   "singleQuote": true,
-  "react/jsx-indent-props": [2, "tab"]
+  "react/jsx-indent-props": [2, "tab"],
+  "tabWidth": 2
 }

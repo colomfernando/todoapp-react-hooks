@@ -1,4 +1,5 @@
 import React from 'react';
+import { func } from 'prop-types';
 import Styled from './styles';
 
 const Input = ({ dispatch }) => {
@@ -9,6 +10,14 @@ const Input = ({ dispatch }) => {
 		}
 	};
 	return <Styled.Container placeholder="Create Task" onKeyPress={handleKeyPress} />;
+};
+
+Input.propTypes = {
+	dispatch: func
+};
+
+Input.defaultProps = {
+	dispatch: () => {}
 };
 
 export default Input;

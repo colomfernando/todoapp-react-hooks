@@ -3,10 +3,10 @@ import GlobalStyles from 'GlobalStyles';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
 import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
-import Styled from './styles';
 import Form from 'components/Form';
 import GroupTasks from 'components/GroupTasks';
 import reducer, { initialState } from 'reducer';
+import Styled from './styles';
 
 const styleNode = document.createComment('insertion-point-jss');
 document.head.insertBefore(styleNode, document.head.firstChild);
